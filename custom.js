@@ -1,3 +1,12 @@
+//
+// custom.js
+// Login Script
+//
+// Created by Koiwu Beyan.
+// Copyright 2013 Koiwu Beyan. All rights reserved.
+//
+
+
 function getXMLHttp(){
   var xmlHttp
   try
