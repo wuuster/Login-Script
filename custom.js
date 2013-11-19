@@ -47,7 +47,7 @@ function logUser(email, password){
 				handleLogUser(xmlHttp.responseText, email);
 			}
 		}
-		xmlHttp.open("GET", "http://koiwu.com/clients/apple/log_user.php?e="+email+"&p="+password, true);
+		xmlHttp.open("GET", "http://www.yourwebsite.com/log_user.php?e="+email+"&p="+password, true);
 		xmlHttp.send(null);
 	} else {
 		alert('Your email is not valid.');
