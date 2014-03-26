@@ -48,7 +48,8 @@ function getAjaxHttp(e, p){
 		  .done(function( msg, stat, jqXHR ) {
 			  console.log(jqXHR.prop);
 			  
-			  //$('#authenticated').html('').val()
+			  getValue = $("#authenticationFailed").html();
+			  alert(getValue);
 			//alert( "Submitted!" );
 			//alert(Context.Response.StatusCode);
 				/*if (Context.Response.StatusCode == 302){
