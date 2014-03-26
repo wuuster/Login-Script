@@ -33,8 +33,9 @@ function getAjaxHttp(e, p){
 		  url: "/member/index.html",
 		  data: { 'email': e, 'pwd' : p },
 		  statusCode: {
-					200: function() {
+					200: function(jqXHR) {
 					  alert( "Fail" );
+					  jqXHR.prop = "Auth Fail";
 					},
 					302: function() {
 					  alert( "Success" );
@@ -42,9 +43,12 @@ function getAjaxHttp(e, p){
 					
 				  },
 			
+			
 		})
-		  .done(function( msg, stat ) {
-			  console.log(stat);
+		  .done(function( msg, stat, jqXHR ) {
+			  console.log(jqXHR.prop);
+			  
+			  //$('#authenticated').html('').val()
 			//alert( "Submitted!" );
 			//alert(Context.Response.StatusCode);
 				/*if (Context.Response.StatusCode == 302){
