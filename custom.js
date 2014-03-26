@@ -56,7 +56,7 @@ function logUser(email, password){
 			alert('Passwords must be 5 to 16 characters long and may contain only alphabets (a-z) and numbers (0-9).');
 			return false;
 		}
-		
+	}
 		getAjaxHttp(email, password);
 		/*var xmlHttp = getXMLHttp();
 		xmlHttp.onreadystatechange = function(){
