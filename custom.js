@@ -31,7 +31,17 @@ function getAjaxHttp(e, p){
 		$.ajax({
 		  type: "POST",
 		  url: "/member/index.html",
-		  data: { 'email': e, 'pwd' : p }
+		  data: { 'email': e, 'pwd' : p },
+		  statusCode: {
+					200: function() {
+					  alert( "Fail" );
+					},
+					302: function() {
+					  alert( "Success" );
+					},
+					
+				  },
+			
 		})
 		  .done(function( msg, stat ) {
 			  console.log(stat);
@@ -43,6 +53,7 @@ function getAjaxHttp(e, p){
 					alert('200 Passed!');
 				} else {
 				}*/
+				
 		  });
 		
 }
