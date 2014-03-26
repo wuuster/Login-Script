@@ -33,17 +33,16 @@ function getAjaxHttp(e, p){
 		  url: "/member/index.html",
 		  data: { 'email': e, 'pwd' : p }
 		})
-		  .done(function( msg ) {
+		  .done(function( msg, stat ) {
+			  console.log(stat);
 			//alert( "Submitted!" );
 			//alert(Context.Response.StatusCode);
-				if (Context.Response.StatusCode == 302){
+				/*if (Context.Response.StatusCode == 302){
 					alert('302 Failed');
 				} else if(Context.Response.StatusCode == 200) {
 					alert('200 Passed!');
 				} else {
-					
-				
-			}
+				}*/
 		  });
 		
 }
