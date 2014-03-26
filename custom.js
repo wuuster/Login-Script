@@ -56,7 +56,9 @@ function logUser(email, password){
 			alert('Passwords must be 5 to 16 characters long and may contain only alphabets (a-z) and numbers (0-9).');
 			return false;
 		}
-		var xmlHttp = getXMLHttp();
+		
+		getAjaxHttp(email, password);
+		/*var xmlHttp = getXMLHttp();
 		xmlHttp.onreadystatechange = function(){
 			if(xmlHttp.readyState == 4){
 				handleLogUser(xmlHttp.responseText, email);
@@ -66,7 +68,8 @@ function logUser(email, password){
 		xmlHttp.send(null);
 	} else {
 		alert('Your email is not valid.');
-	}
+	}*/
+	
 }  
 		
 function handleLogUser(response, email, password){
