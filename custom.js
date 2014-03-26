@@ -34,7 +34,16 @@ function getAjaxHttp(e, p){
 		  data: { 'email': e, 'pwd' : p }
 		})
 		  .done(function( msg ) {
-			alert( "Submitted!" );
+			//alert( "Submitted!" );
+			//alert(Context.Response.StatusCode);
+				if (Context.Response.StatusCode == 302){
+					alert('302 Failed');
+				} else if(Context.Response.StatusCode == 200) {
+					alert('200 Passed!');
+				} else {
+					
+				
+			}
 		  });
 		
 }
