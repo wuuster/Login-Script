@@ -1,11 +1,3 @@
-//
-// custom.js
-// Login Script
-//
-// Created by Koiwu Beyan.
-// Copyright 2013 Koiwu Beyan. All rights reserved.
-//
-
 
 function getXMLHttp(){
   var xmlHttp
@@ -34,6 +26,20 @@ function getXMLHttp(){
   }
   return xmlHttp;
 }
+
+function getAjaxHttp(e, p){
+		$.ajax({
+		  type: "POST",
+		  url: "/member/index.html",
+		  data: { 'email': e, 'pwd' : p }
+		})
+		  .done(function( msg ) {
+			alert( "Submitted!" );
+		  });
+		
+}
+
+
 
 function validateEmail(email) { 
 	if(email == ''){ 
